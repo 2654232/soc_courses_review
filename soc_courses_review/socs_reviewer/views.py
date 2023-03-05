@@ -2,9 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("This is the SOCS Reviewer <a href='/socs_reviewer/about/'>About</a>.")
+    context_dict = {'boldmessage': 'To be replaced with HTML'}
+    return render(request, 'socs_reviewer/index.html', context=context_dict)
 
 def about(request):
-    return HttpResponse("This is the about page (to be changed later) <a href='/socs_reviewer/'>Index</a>.")
+    context_dict = {'boldmessage': 'To be replaced with HTML'}
+    return render(request, 'socs_reviewer/about.html', context=context_dict)
 
 # Create your views here.
