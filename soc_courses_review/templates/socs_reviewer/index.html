@@ -1,22 +1,69 @@
 <!DOCTYPE html>
-
-{% load staticfiles %}
-
 <html>
-
-	<head>
-		<title>Socs Reviewer</title>
-		<!--How to link CSS and JavaScript-->
-		<link rel="stylesheet" href="{% static "css/base.css" %}" />
-		<script src="{% static "js/jquery.js" %}"></script>
-	</head>
-
-	<body>
-
-		<strong>{{ boldmessage }}</strong><br />
-		<a href="/socs_reviewer/about/">About</a><br />
-		<img src="{% static 'images/uofg.png' %}" alt="University Logo" />
-	
-	</body>
-
+<head>
+	<title>Year of Study - Computing Science</title>
+	<style>
+		body {
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}
+        h1 {
+        font-weight: bold;
+        color: #000;
+        font-size: 32px;
+        }
+		.container {
+			
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.column {
+			flex-basis: 30%;
+			margin: 5px;
+			
+			padding: 5px;
+			text-align: center;
+		}
+		.column img {
+			border-radius: 25px;
+			max-width: 100%;
+			height: auto;
+			width: fit-content;
+		}
+		#profile {
+			position: fixed;
+			top: 10px;
+			right: 10px;
+			background-color: #ccc;
+			padding: 10px;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Year of Study - Computing Science</h1>
+	<a id="profile" href="poem.html">LOGIN</a>
+	<div class="container">
+		<div class="column">
+			<img src="images/Year One.png" alt="Picture 1">
+		</div>
+		<div class="column">
+			<img src="images/I Love Coding.jpg" alt="Picture">
+		</div>
+		<div class="column">
+			<img src="images/Year Two.png" alt="Picture 2">
+		</div>
+		<div class="column">
+			<img src="images/Year Three.png" alt="Picture 3">
+		</div>
+		<div class="column">
+			<img src="images/Year Four.png" alt="Picture 4">
+		</div>
+		<div class="column">
+			<img src="images/Year Five.png" alt="Picture 5">
+		</div>
+	</div>
+</body>
 </html>
