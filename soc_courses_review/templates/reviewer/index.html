@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- New line -->
+
+<html>
+	<head>
+		<title>Courses_Reviewer</title>
+	</head>
+	<body>
+		<h1>Courses_Reviewer</h1>
+		<div>
+			hey there partner! <br />
+		<strong>{{ boldmessage }}</strong><br />
+		</div>
+		<div>
+			{% if courses %}
+				<ul>
+				{% for course in courses %}
+				
+					<li>
+					<!--  add an HTML hyperlink -->
+					<a href="/reviewer/Course/{{ course.slug }}/">{{ course.Name }}</a>
+					</li>
+
+				{% endfor %}
+				</ul>
+			{% else %}
+				<strong>There are no courses present.</strong>
+			{% endif %}
+		</div>
+		<div>
+			<a href="/reviewer/AllCourses/">AllCourses</a><br />
+			<img src="{% static 'images/uog.jpg' %}" alt="Picture of University Of Glasgow" /> <!-- New line -->
+		</div>
+	</body>
+</html>

@@ -16,12 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
-from socs_reviewer import views
 from django.conf import settings
 from django.conf.urls.static import static
 
+from reviewer import views
+
 urlpatterns = [
     path('', views.index, name='index'),
-    path('socs_reviewer/', include('socs_reviewer.urls')),
+    path('reviewer/', include('reviewer.urls')),
+    # The above maps any URLs starting with reviewer/ to be handled by reviewer.
+
+
     path('admin/', admin.site.urls),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

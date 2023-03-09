@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- New line -->
+
+<html>
+	<head>
+		<title>Courses_Reviewer - AllCourses</title>
+	</head>
+	<body>
+		<h1>All Courses</h1>
+		<div>
+			This is is AllCourses page <br />
+		<strong>{{ boldmessage }}</strong><br />
+		</div>
+		<div>
+			<a href="/reviewer/">Home</a><br />
+			<img src="{% static 'images/uog.jpg' %}" alt="Picture of University Of Glasgow" /> <!-- New line -->
+			<img src="{{ MEDIA_URL }}uofg.png" alt="Picture of University Of Glasgow" /> <!-- New line -->
+		</div>
+	</body>
+</html>
