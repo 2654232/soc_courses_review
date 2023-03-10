@@ -14,7 +14,7 @@ def index(request):
     context_dict = {}
 
     
-    context_dict['boldmessage'] = 'WellCome,World,Changers,UOG ,Inspirers!'
+    context_dict['boldmessage'] = 'WellCome To University Of Glasgow!'
     context_dict['courses'] = course_list
     
     return render(request, 'reviewer/index.html', context=context_dict)

@@ -6,7 +6,7 @@ from reviewer.models import Course, Review
 # Register your models here.
 
 class ReviewAdmin(admin.ModelAdmin):
-     list_display = ('Course','Rating', 'comment')
+     list_display = ('Course','Rating', 'Comment')
 
 class CourseAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':('Name',)}
